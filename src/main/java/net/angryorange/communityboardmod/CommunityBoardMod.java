@@ -1,6 +1,7 @@
 package net.angryorange.communityboardmod;
 
 import com.mojang.logging.LogUtils;
+import net.angryorange.communityboardmod.block.ModBlocks;
 import net.angryorange.communityboardmod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,7 @@ public class CommunityBoardMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
